@@ -71,5 +71,22 @@ const createMess = (message, interval) => {
 };
 
 // se vuoi fermare il loop
-const loop = createMess("Parto ogni secondo", 1000)
-setTimeout(() => clearInterval(loop), 5000)
+const loop = createMess("Parto ogni secondo", 1000);
+setTimeout(() => clearInterval(loop), 5000);
+
+// 🏆 Snack 6
+// Crea un contatore automatico con setInterval
+// Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo e restituisce una funzione che avvia un setInterval, incrementando un contatore e stampandolo.
+
+const creaContatoreAutomatico = (interval, startInterval) => {
+  let contatore = 0;
+  return function startInterval() {
+    return setInterval(() => {
+      contatore++;
+      console.log(contatore);
+    }, interval);
+  };
+};
+
+const startCounter = creaContatoreAutomatico(1000);
+startCounter();
