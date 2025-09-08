@@ -32,3 +32,19 @@ console.log(`Questo è il quadrato di ${num}:`, quadrato(num));
 // Crea una funzione eseguiOperazione
 // Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
 
+const somma = (param1, param2) => param1 + param2;
+const moltiplicazione = (param1, param2) => param1 * param2;
+const sottrazione = (param1, param2) => param1 - param2;
+
+function eseguiOperazione(param1, param2, operazione) {
+  return operazione(param1, param2);
+}
+
+console.log(eseguiOperazione(6, 10, somma));
+console.log(eseguiOperazione(4, 8, moltiplicazione));
+console.log(eseguiOperazione(20, 8, sottrazione));
+
+// 🏆 Snack 4
+// Crea un generatore di funzioni creaTimer
+// Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+
