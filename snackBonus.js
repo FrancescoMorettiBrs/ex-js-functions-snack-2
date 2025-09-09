@@ -17,4 +17,22 @@ function contoAllaRovescia(n) {
   }, interval);
 }
 
-contoAllaRovescia(n)
+contoAllaRovescia(n);
+
+// Snack 9 (Bonus)
+// Creare una funzione che esegue una sequenza di operazioni con ritardi
+// Scrivi una funzione sequenzaOperazioni che accetta un array di operazioni (funzioni) e un tempo di intervallo.
+
+// Ogni operazione deve essere eseguita in sequenza con un ritardo uguale al tempo di intervallo.
+
+const array = [() => "Operazione 1", () => "Operazione 2", () => "Operazione 3"];
+
+function sequenzaOperazioni(array, interval) {
+  for (let i = 0; i < array.length; i++) {
+    setTimeout(() => {
+      console.log(array[i]());
+    }, i * interval);
+  }
+}
+
+sequenzaOperazioni(array, 2000);
